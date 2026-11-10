@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My First Three HTML Projects — by Agunechemba Ekene</title>
+<link rel="icon" type="image/svg+xml" href="https://pph.name.ng/pphlogo.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ==================== READING PROGRESS ==================== -->
+<div class="reading-progress">
+  <div class="reading-progress-fill"></div>
+</div>
+<div class="page-indicator">1 / 12</div>
+
+<!-- ==================== PAGE 1: COVER ==================== -->
+<div class="book-page cover-page active" data-page-index="0">
+  <div class="cover-content">
+    <div class="cover-emoji-row">😜 🐉 🌈</div>
+    <p class="cover-series">A Beginner's Book</p>
+    <h1>My First Three<br>HTML Projects</h1>
+    <p class="cover-subtitle">A step-by-step book for young coders<br>and their grown-up helpers</p>
+    <p class="cover-author">Written by Agunechemba Ekene</p>
+    <p class="cover-note">
+      Three tiny projects, one big adventure.<br>
+      By the end, you will have built a clickable button,
+      a choose-your-own adventure story, and a page all about you.
+    </p>
+    <nav class="book-nav">
+      <button class="nav-button" onclick="goToPage(1)">Open the book →</button>
+    </nav>
+    <p class="cover-credit">
+      <a href="https://agunechemba.github.io" target="_blank" rel="noopener">Agunechemba Ekene</a>
+    </p>
+  </div>
+</div>
+
+<!-- ==================== PAGE 2: TABLE OF CONTENTS ==================== -->
+<div class="book-page toc-page" data-page-index="1">
+  <div class="toc-intro">
+    <h2>📖 What is inside</h2>
+    <p>Nine short chapters, three real projects.</p>
+  </div>
+  <ol>
+    <li><a href="#" data-goto="2">What is HTML?</a></li>
+    <li><a href="#" data-goto="3">Setting up your computer</a></li>
+    <li><a href="#" data-goto="4">Project 1 — The Silly Face Clicker 😜</a></li>
+    <li><a href="#" data-goto="5">Project 2 — The 3-Page Adventure Story 🐉</a></li>
+    <li><a href="#" data-goto="6">Project 3 — All About Me Dream Page 🌈</a></li>
+    <li><a href="#" data-goto="7">When something goes wrong</a></li>
+    <li><a href="#" data-goto="8">The Big Cheat Sheet</a></li>
+    <li><a href="#" data-goto="9">The Big Final Quiz 🏆</a></li>
+    <li><a href="#" data-goto="10">Your certificate and what to do next 🎓</a></li>
+  </ol>
+  <nav class="book-nav">
+    <button class="nav-button secondary" onclick="goToPage(0)">← Cover</button>
+    <button class="nav-button" onclick="goToPage(2)">Start reading →</button>
+  </nav>
+</div>
+
+<!-- ==================== PAGE 3: CHAPTER 1 ==================== -->
+<div class="book-page chapter-page" data-page-index="2">
+  <div class="chapter-header">
+    <p class="chapter-part">Chapter 1</p>
+    <h2>What is HTML?</h2>
+    <p class="chapter-tagline">The language of every web page you have ever visited.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>
+      <strong>HTML</strong> is the language we use to build web pages. Every website you have ever
+      visited — games, videos, school pages, shops — was made with HTML at its heart.
+    </p>
+
+    <h3>Think of it like a box of labelled bricks 🧱</h3>
+    <p>
+      Imagine you have a big pile of bricks. Some bricks are big (for titles). Some are small
+      (for normal words). Some are pictures. Some are buttons. HTML lets you pick up a brick,
+      put a <em>label</em> on it, and stack it on the page.
+    </p>
+    <p>
+      The label is called a <strong>tag</strong>. A tag is just a word wrapped in pointy brackets,
+      like this: <code>&lt;p&gt;</code>.
+    </p>
+
+    <h3>Tags come in pairs (like a sandwich) 🥪</h3>
+    <p>
+      Most tags have an <strong>opening tag</strong> and a <strong>closing tag</strong>.
+      The closing tag has a little slash inside it.
+    </p>
+    <pre class="code-example"><code>&lt;p&gt;Hello world!&lt;/p&gt;
+ ↑                  ↑
+ opening tag        closing tag</code></pre>
+    <p>
+      Everything between the two tags is the <strong>content</strong> — the words the person
+      will actually see. The tags themselves are invisible; they are instructions for the browser.
+    </p>
+
+    <h3>The browser is a very obedient robot 🤖</h3>
+    <p>
+      A <strong>browser</strong> is the program you use to look at web pages (Chrome, Edge,
+      Firefox, Safari). The browser is like a robot that reads your HTML file from top to bottom
+      and does exactly what it is told — no more, no less. If you forget a closing tag, it gets
+      confused. That is why we check our code carefully.
+    </p>
+
+    <h3>Six tags you will use in every project</h3>
+    <table>
+      <tr><th>Tag</th><th>What it does</th></tr>
+      <tr><td><code>&lt;h1&gt;</code></td><td>Big heading (a title)</td></tr>
+      <tr><td><code>&lt;p&gt;</code></td><td>Paragraph (normal words)</td></tr>
+      <tr><td><code>&lt;button&gt;</code></td><td>A clickable button</td></tr>
+      <tr><td><code>&lt;a&gt;</code></td><td>A link to another page</td></tr>
+      <tr><td><code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code></td><td>A bullet list and its items</td></tr>
+      <tr><td><code>&lt;body&gt;</code></td><td>The "container" holding everything you see</td></tr>
+    </table>
+  </div>
+
+  <div class="chapter-ideas tip">
+    <h3>💡 The magic word: STYLE</h3>
+    <p>
+      Almost every tag can carry a <code>style="..."</code> part. That is where you choose
+      colours, sizes, and fonts. You will use <code>style</code> a LOT in this book.
+    </p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>✅ Review Questions</h3>
+    <ol>
+      <li>What does HTML help us build?
+        <details><summary>Show answer</summary><p>Web pages (websites).</p></details>
+      </li>
+      <li>What is a <em>tag</em>?
+        <details><summary>Show answer</summary><p>A word wrapped in pointy brackets, like <code>&lt;p&gt;</code>, that tells the browser what something is.</p></details>
+      </li>
+      <li>What is the difference between <code>&lt;h1&gt;</code> and <code>&lt;/h1&gt;</code>?
+        <details><summary>Show answer</summary><p><code>&lt;h1&gt;</code> is the opening tag. <code>&lt;/h1&gt;</code> is the closing tag (it has a slash). Everything between them is the content.</p></details>
+      </li>
+      <li>Why do we say the browser is "obedient"?
+        <details><summary>Show answer</summary><p>Because it does exactly what your code says, from top to bottom — even if you make a mistake.</p></details>
+      </li>
+    </ol>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button secondary" onclick="goToPage(1)">← Contents</button>
+    <button class="nav-button" onclick="goToPage(3)">Next: Setting up →</button>
+  </nav>
+</div>
+
+<!-- ==================== PAGE 4: CHAPTER 2 ==================== -->
+<div class="book-page chapter-page" data-page-index="3">
+  <div class="chapter-header">
+    <p class="chapter-part">Chapter 2</p>
+    <h2>Setting up your computer</h2>
+    <p class="chapter-tagline">Three tools and one folder — that is all you need.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>
+      You only need three things: a <strong>text editor</strong> (to write the code),
+      a <strong>browser</strong> (to see the result), and <strong>one folder</strong>
+      to keep your projects tidy.
+    </p>
+
+    <h3>Step-by-step setup</h3>
+    <ol class="steps">
+      <li>
+        <strong>Make a folder.</strong> On your Desktop, right-click and choose
+        <em>New &rarr; Folder</em>. Name it <code>HTML-Fun</code>. All your projects will live here.
+      </li>
+      <li>
+        <strong>Open your text editor.</strong>
+        <ul>
+          <li><strong>Windows:</strong> press the Start button, type <code>Notepad</code>, press Enter.</li>
+          <li><strong>Mac:</strong> open <em>TextEdit</em>. Then click
+              <em>Format &rarr; Make Plain Text</em>. <strong>This is very important</strong> —
+              if you skip it, your code becomes invisible formatting and will not work.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Type your code</strong> (or copy it from this book).
+      </li>
+      <li>
+        <strong>Save it as an HTML file.</strong> Click <em>File &rarr; Save As</em>.
+        <ul>
+          <li>Go into your <code>HTML-Fun</code> folder.</li>
+          <li>File name: <code>hello.html</code></li>
+          <li>Save as type: <strong>All Files</strong> (not "Text Documents").</li>
+          <li>Click Save.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Open it in the browser.</strong> Go to your folder and <strong>double-click</strong>
+        <code>hello.html</code>. It opens in your browser and you see your page!
+      </li>
+      <li>
+        <strong>Learn the magic loop.</strong> This is the most important habit in this whole book.
+      </li>
+    </ol>
+  </div>
+
+  <div class="chapter-ideas tip">
+    <h3>🔁 The Magic Loop: Save → Refresh → Look</h3>
+    <p>
+      1. Change something in Notepad.<br>
+      2. Press <strong>Ctrl + S</strong> (Windows) or <strong>Cmd + S</strong> (Mac) to save.<br>
+      3. Click on your browser and press <strong>F5</strong> (or the refresh ⟳ button).<br>
+      4. Look at what changed.<br>
+      Repeat forever. This is how every programmer in the world works.
+    </p>
+  </div>
+
+  <div class="chapter-ideas warn">
+    <h3>⚠️ The number one mistake</h3>
+    <p>
+      If you see your <em>code</em> on the screen instead of a web page, your file was saved as
+      <code>hello.html.txt</code>. Rename it so it ends in just <code>.html</code>.
+      In Windows, turn on "File name extensions" in the View menu of your folder so you can see
+      the real name.
+    </p>
+  </div>
+
+  <div class="chapter-ideas grownup">
+    <h3>🧑‍🏫 Note for the grown-up helper</h3>
+    <p>
+      Keep Notepad and the browser side by side on the screen. The child should be the
+      <em>designer</em> — deciding colours, words, and emoji — while you help with typing
+      symbols like <code>&lt;</code> and <code>&gt;</code>. Let them press Save and Refresh
+      themselves; that is the moment the whole thing "clicks."
+    </p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>✅ Review Questions</h3>
+    <ol>
+      <li>What three things do you need to start making web pages?
+        <details><summary>Show answer</summary><p>A text editor, a browser, and a folder to keep your files in.</p></details>
+      </li>
+      <li>Why must a Mac user click "Make Plain Text" in TextEdit?
+        <details><summary>Show answer</summary><p>Because rich text adds invisible formatting. Plain text means the computer sees exactly the characters you typed.</p></details>
+      </li>
+      <li>What must an HTML file name end with?
+        <details><summary>Show answer</summary><p><code>.html</code></p></details>
+      </li>
+      <li>What is the Magic Loop?
+        <details><summary>Show answer</summary><p>Save the file &rarr; Refresh the browser &rarr; Look at what changed.</p></details>
+      </li>
+    </ol>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button secondary" onclick="goToPage(2)">← Previous</button>
+    <button class="nav-button" onclick="goToPage(4)">Next: Project 1 →</button>
+  </nav>
+</div>
+
+<!-- ==================== PAGE 5: CHAPTER 3 (PROJECT 1) ==================== -->
+<div class="book-page chapter-page" data-page-index="4">
+  <div class="chapter-header">
+    <p class="chapter-part">Chapter 3 · Project 1</p>
+    <h2>The Silly Face Clicker 😜</h2>
+    <p class="chapter-tagline">A button that goes BOING.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>
+      <strong>What you are making:</strong> a page with one giant emoji button. When you click it,
+      the emoji changes and the page colour changes. It is instant, silly, and very satisfying.
+    </p>
+  </div>
+
+  <div class="demo">
+    <div class="demo-label">▶ Live demo — click the face!</div>
+    <div id="demoBox1" style="text-align:center; background:#fef3c7; padding:18px; border-radius:10px;">
+      <p style="margin:0 0 10px; font-weight:700;">Click the button!</p>
+      <button style="font-size:56px; padding:8px 20px; cursor:pointer; border-radius:12px; border:3px solid #c8553d; background:#fff;"
+        onclick="document.getElementById('demoBox1').style.background='#fbcfe8'; this.innerHTML='🤪';">😀</button>
+    </div>
+    <p style="font-size:.85rem; margin:10px 0 0; color:#6a5f4c;">
+      In the real project below, this changes the colour of the <em>whole page</em>.
+      Here it only changes this little box, so the book stays readable.
+    </p>
+  </div>
+
+  <h3>The code (copy it exactly)</h3>
+  <pre class="code-example"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body style="text-align:center; background:yellow; font-family:sans-serif"&gt;
+
+  &lt;h1&gt;Click the button!&lt;/h1&gt;
+
+  &lt;button style="font-size:80px; padding:20px"
+          onclick="document.body.style.background='pink'; this.innerHTML='🤪'"&gt;
+    😀
+  &lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <h3>Doing it, step by step</h3>
+  <ol class="steps">
+    <li>Open your text editor and start a new, empty document.</li>
+    <li>Type or copy the code above, from the very first line to the very last line.</li>
+    <li>Save it in your <code>HTML-Fun</code> folder as <code>face.html</code>.</li>
+    <li>Double-click <code>face.html</code>. You should see a big yellow page with a smiley.</li>
+    <li>Click the smiley. The page turns pink and the face turns silly. 🎉</li>
+    <li>Go back to your code, change <code>yellow</code> to <code>lightblue</code>, save, refresh, and look.</li>
+  </ol>
+
+  <h3>What each part actually means</h3>
+  <table>
+    <tr><th>Piece of code</th><th>Plain English</th></tr>
+    <tr><td><code>&lt;!DOCTYPE html&gt;</code></td><td>"Hey browser, this is a modern HTML page." It always goes first.</td></tr>
+    <tr><td><code>&lt;html&gt;</code> ... <code>&lt;/html&gt;</code></td><td>Wraps up the entire page.</td></tr>
+    <tr><td><code>&lt;body&gt;</code> ... <code>&lt;/body&gt;</code></td><td>Everything the person can actually see goes in here.</td></tr>
+    <tr><td><code>style="text-align:center"</code></td><td>Push everything into the middle of the page.</td></tr>
+    <tr><td><code>style="background:yellow"</code></td><td>Paint the page yellow.</td></tr>
+    <tr><td><code>font-family:sans-serif</code></td><td>Use a clean, simple letter shape.</td></tr>
+    <tr><td><code>font-size:80px</code></td><td>Make the button's text 80 pixels tall — enormous!</td></tr>
+    <tr><td><code>padding:20px</code></td><td>Add breathing room inside the button.</td></tr>
+    <tr><td><code>onclick="..."</code></td><td>"When somebody clicks me, do this."</td></tr>
+    <tr><td><code>document.body.style.background='pink'</code></td><td>Find the page and repaint its background pink.</td></tr>
+    <tr><td><code>this.innerHTML='🤪'</code></td><td>"Change what is inside me to this emoji."</td></tr>
+  </table>
+
+  <div class="chapter-ideas tip">
+    <h3>💡 Two tiny rules that matter a LOT</h3>
+    <p>
+      <strong>1. Use straight quotes</strong> — <code>"</code> and <code>'</code> — never curly
+      ones like <code>“</code> and <code>’</code>. Word processors turn straight quotes curly
+      automatically, which breaks the code. Type in Notepad to be safe.
+    </p>
+    <p>
+      <strong>2. The semicolon <code>;</code> separates two instructions.</strong>
+      In <code>onclick</code>, we say two things: change the background, <em>and</em> change the
+      emoji. The <code>;</code> between them means "and now do the next thing."
+    </p>
+  </div>
+
+  <div class="chapter-ideas tryit">
+    <h3>🎨 Now you try — change ONE thing at a time</h3>
+    <ul>
+      <li>Change <code>yellow</code> to <code>skyblue</code>, <code>gold</code>, or <code>#ffe4e1</code>.</li>
+      <li>Change <code>pink</code> to another colour — what happens when you click?</li>
+      <li>Change the 😀 to 🐸 or 🚀 or 🍩.</li>
+      <li>Change the 🤪 to something even sillier.</li>
+      <li>Change <code>80px</code> to <code>40px</code>, then to <code>150px</code>.</li>
+      <li>Change the heading text between <code>&lt;h1&gt;</code> and <code>&lt;/h1&gt;</code>.</li>
+    </ul>
+    <p style="margin-bottom:0;"><strong>Boss level:</strong> add a second button underneath that
+    turns the page back to yellow and the face back to 😀.</p>
+  </div>
+
+  <div class="chapter-ideas warn">
+    <h3>🔧 If it does not work...</h3>
+    <ul>
+      <li><strong>I see the code, not a page.</strong> The file is <code>.html.txt</code>. Rename it.</li>
+      <li><strong>The button does nothing.</strong> Check for curly quotes; retype the
+          <code>onclick</code> part with straight quotes.</li>
+      <li><strong>Half the page is broken.</strong> A closing tag is missing — check
+          <code>&lt;/button&gt;</code> and <code>&lt;/body&gt;</code>.</li>
+      <li><strong>Nothing changed at all.</strong> You forgot to save, or forgot to refresh.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>✅ Review Questions</h3>
+    <ol>
+      <li>Which tag makes the biggest heading on the page?
+        <details><summary>Show answer</summary><p><code>&lt;h1&gt;</code></p></details>
+      </li>
+      <li>What does <code>onclick</code> mean, in plain English?
+        <details><summary>Show answer</summary><p>"When this thing is clicked, do what I say next."</p></details>
+      </li>
+      <li>What does <code>this.innerHTML='🤪'</code> do?
+        <details><summary>Show answer</summary><p>It replaces whatever is inside the thing you clicked (the button) with the 🤪 emoji.</p></details>
+      </li>
+      <li>Why can't we use curly quotes <code>“like this”</code> in code?
+        <details><summary>Show answer</summary><p>Because the browser only understands straight quotes <code>"</code>. Curly quotes are just decorative characters and the code breaks.</p></details>
+      </li>
+      <li>What is the semicolon <code>;</code> doing in <code>onclick</code>?
+        <details><summary>Show answer</summary><p>It separates two instructions: "change the background" and "change the emoji."</p></details>
+      </li>
+    </ol>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button secondary" onclick="goToPage(3)">← Previous</button>
+    <button class="nav-button" onclick="goToPage(5)">Next: Project 2 →</button>
+  </nav>
+</div>
+
+<!-- ==================== PAGE 6: CHAPTER 4 (PROJECT 2) ==================== -->
+<div class="book-page chapter-page" data-page-index="5">
+  <div class="chapter-header">
+    <p class="chapter-part">Chapter 4 · Project 2</p>
+    <h2>The 3-Page Adventure Story 🐉</h2>
+    <p class="chapter-tagline">You are the author now.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>
+      <strong>What you are making:</strong> a tiny "choose your own adventure" story.
+      You will be the author, and the reader gets to decide what happens next by clicking links.
+    </p>
+  </div>
+
+  <div class="chapter-ideas tip">
+    <h3>📁 This project uses THREE files</h3>
+    <p>
+      This is the first project with more than one file — and that is exactly the point.
+      Each page is its own file, and <strong>links connect them together</strong>.
+      All three files must sit in the <strong>same folder</strong>, or the links will not find them.
+    </p>
+  </div>
+
+  <h3>File 1 — <code>page1.html</code> (the beginning)</h3>
+  <pre class="code-example"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body style="font-family:sans-serif; text-align:center; background:#fff7e6"&gt;
+
+  &lt;h1&gt;🚪 You find a mysterious door&lt;/h1&gt;
+
+  &lt;p&gt;&lt;a href="page2.html"&gt;Open the door&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href="page3.html"&gt;Run away!&lt;/a&gt;&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <h3>File 2 — <code>page2.html</code> (the dragon)</h3>
+  <pre class="code-example"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body style="font-family:sans-serif; text-align:center; background:#ffe6e6"&gt;
+
+  &lt;h1&gt;🐉 DRAGON!!!&lt;/h1&gt;
+  &lt;p&gt;It wants a snack. What do you give it?&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href="page1.html"&gt;🍎 An apple&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href="page3.html"&gt;🍕 Pizza&lt;/a&gt;&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <h3>File 3 — <code>page3.html</code> (the ending)</h3>
+  <pre class="code-example"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body style="font-family:sans-serif; text-align:center; background:#e6f0ff"&gt;
+
+  &lt;h1&gt;🌙 The End&lt;/h1&gt;
+  &lt;p&gt;&lt;a href="page1.html"&gt;Start over&lt;/a&gt;&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <h3>Doing it, step by step</h3>
+  <ol class="steps">
+    <li>Open your text editor and type (or copy) the code for <strong>File 1</strong>.</li>
+    <li>Save it inside <code>HTML-Fun</code> with the exact name <code>page1.html</code>.</li>
+    <li>Clear the editor, put in <strong>File 2</strong>, and save it as <code>page2.html</code>
+        <em>in the same folder</em>.</li>
+    <li>Clear the editor again, put in <strong>File 3</strong>, save as <code>page3.html</code>.</li>
+    <li>Double-click <code>page1.html</code>. Click "Open the door" and see where you go.</li>
+    <li>Play your own story all the way through. Then start rewriting it.</li>
+  </ol>
+
+  <h3>What each part means</h3>
+  <table>
+    <tr><th>Piece of code</th><th>Plain English</th></tr>
+    <tr><td><code>&lt;a href="page2.html"&gt;</code></td><td>"Make a link that goes to the file called page2.html."</td></tr>
+    <tr><td><code>&lt;/a&gt;</code></td><td>"The clickable words end here."</td></tr>
+    <tr><td><code>href</code></td><td>Short for "hypertext reference" — it is the <em>address</em> the link points to.</td></tr>
+    <tr><td><code>&lt;p&gt;...&lt;/p&gt;</code></td><td>Each link sits in its own paragraph, so each one gets its own line.</td></tr>
+  </table>
+
+  <div class="chapter-ideas warn">
+    <h3>⚠️ The three link killers</h3>
+    <ul>
+      <li><strong>Wrong file name.</strong> <code>Page2.html</code> and <code>page2.html</code>
+          are <em>different</em> to a computer. Capitals matter!</li>
+      <li><strong>Wrong folder.</strong> If <code>page2.html</code> is on your Desktop but
+          <code>page1.html</code> is in <code>HTML-Fun</code>, the link will fail with a
+          "file not found" message.</li>
+      <li><strong>Forgotten quotes.</strong> It must be <code>href="page2.html"</code> with quotes.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-ideas tryit">
+    <h3>🎨 Now you try — become the author</h3>
+    <ul>
+      <li>Change the story words. Who is behind the door? A dragon? A talking cat? Your teacher?</li>
+      <li>Add a <strong>fourth page</strong> called <code>page4.html</code>, and link to it from page 2.</li>
+      <li>Change the background colours of each page to match the mood — dark red for danger,
+          soft green for safety.</li>
+      <li>Add a <strong>secret ending</strong> that you can only reach from one page.</li>
+      <li>Add a picture: <code>&lt;img src="dragon.png" width="200"&gt;</code>
+          (put the picture in the same folder).</li>
+    </ul>
+    <p style="margin-bottom:0;"><strong>Boss level:</strong> make a story with five pages and
+    two different happy endings.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>✅ Review Questions</h3>
+    <ol>
+      <li>What does the <code>&lt;a&gt;</code> tag create?
+        <details><summary>Show answer</summary><p>A link — something you can click to go to another page.</p></details>
+      </li>
+      <li>What does <code>href</code> hold?
+        <details><summary>Show answer</summary><p>The address (file name) of the page you want to go to.</p></details>
+      </li>
+      <li>Why must all three files live in the same folder?
+        <details><summary>Show answer</summary><p>Because the link only says <code>page2.html</code> — it looks for that file right next to the page you are on.</p></details>
+      </li>
+      <li>Is <code>Page2.html</code> the same file as <code>page2.html</code>?
+        <details><summary>Show answer</summary><p>No! Computers treat capital and small letters as different characters.</p></details>
+      </li>
+      <li>How many files would a 6-page adventure need?
+        <details><summary>Show answer</summary><p>Six files — one per page.</p></details>
+      </li>
+    </ol>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button secondary" onclick="goToPage(4)">← Previous</button>
+    <button class="nav-button" onclick="goToPage(6)">Next: Project 3 →</button>
+  </nav>
+</div>
+
+<!-- ==================== PAGE 7: CHAPTER 5 (PROJECT 3) ==================== -->
+<div class="book-page chapter-page" data-page-index="6">
+  <div class="chapter-header">
+    <p class="chapter-part">Chapter 5 · Project 3</p>
+    <h2>All About Me Dream Page 🌈</h2>
+    <p class="chapter-tagline">A page all about you.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>
+      <strong>What you are making:</strong> a colourful poster page about you — your favourites,
+      your dreams, your emoji mood. There is no button to click here; this project is all about
+      <strong>design and creativity</strong>. It is the perfect first project to do all by yourself.
+    </p>
+  </div>
+
+  <h3>The code</h3>
+  <pre class="code-example"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body style="background:#c9f7ff; font-family:'Comic Sans MS', cursive; text-align:center"&gt;
+
+  &lt;h1&gt;⭐ All About Maya ⭐&lt;/h1&gt;
+  &lt;p style="font-size:60px"&gt;🦄🎨🍦🐱&lt;/p&gt;
+
+  &lt;h2&gt;My favourites&lt;/h2&gt;
+  &lt;ul style="display:inline-block; text-align:left"&gt;
+    &lt;li&gt;Colour: purple&lt;/li&gt;
+    &lt;li&gt;Food: pizza&lt;/li&gt;
+    &lt;li&gt;Animal: cat&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h2&gt;My dream room&lt;/h2&gt;
+  &lt;p&gt;🛏️🧸🪴🖼️🎮&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <h3>Doing it, step by step</h3>
+  <ol class="steps">
+    <li>Start a new document and type or copy the code above.</li>
+    <li>Save it as <code>aboutme.html</code> in your <code>HTML-Fun</code> folder.</li>
+    <li>Double-click it. You should see a light-blue page with your name in big letters.</li>
+    <li>Now replace <strong>Maya</strong> with <strong>your own name</strong> everywhere it appears.</li>
+    <li>Replace the favourites list with your own three favourites. Save and refresh.</li>
+    <li>Keep changing colours, emoji, and words until it feels like <em>you</em>.</li>
+  </ol>
+
+  <h3>What each part means</h3>
+  <table>
+    <tr><th>Piece of code</th><th>Plain English</th></tr>
+    <tr><td><code>&lt;h2&gt;</code></td><td>A heading that is one size smaller than <code>&lt;h1&gt;</code> — good for section titles.</td></tr>
+    <tr><td><code>&lt;ul&gt;</code></td><td>"Start a bullet list here." (ul = unordered list)</td></tr>
+    <tr><td><code>&lt;li&gt;</code></td><td>"This is one item in the list." (li = list item)</td></tr>
+    <tr><td><code>display:inline-block</code></td><td>Makes the list shrink to fit its words instead of stretching across the page.</td></tr>
+    <tr><td><code>text-align:left</code></td><td>Inside the list, keep the text lined up on the left, even though the page is centred.</td></tr>
+    <tr><td><code>font-size:60px</code> on a <code>&lt;p&gt;</code></td><td>Makes the emoji row enormous — a great trick for instant decoration.</td></tr>
+    <tr><td><code>font-family:'Comic Sans MS', cursive</code></td><td>Try the first font; if the computer does not have it, use a fun cursive one instead.</td></tr>
+  </table>
+
+  <div class="chapter-ideas tip">
+    <h3>💡 Why are there quotes around 'Comic Sans MS'?</h3>
+    <p>
+      When a font name has <strong>spaces</strong> in it, we wrap it in quotes so the browser
+      knows the spaces belong to the name. Single words like <code>sans-serif</code> do not
+      need quotes. The comma means "or, if you cannot find the first one, try this one."
+    </p>
+  </div>
+
+  <div class="chapter-ideas tryit">
+    <h3>🎨 Now you try — make it truly yours</h3>
+    <ul>
+      <li>Change <code>#c9f7ff</code> to your favourite colour (ask a grown-up to help you find
+          a colour code, or just use a name like <code>lavender</code>).</li>
+      <li>Add a <strong>third section</strong> called "My superpower" with its own
+          <code>&lt;h2&gt;</code> and <code>&lt;p&gt;</code>.</li>
+      <li>Make the list longer — five favourites instead of three.</li>
+      <li>Add your photo: <code>&lt;img src="me.jpg" width="200"&gt;</code>
+          (save the photo in the same folder and use its exact file name).</li>
+      <li>Add a favourite quote in a <code>&lt;p&gt;</code> with
+          <code>style="font-style:italic"</code>.</li>
+    </ul>
+    <p style="margin-bottom:0;"><strong>Boss level:</strong> make one page for every person in
+    your family, and link them all together like you did in Project 2.</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>✅ Review Questions</h3>
+    <ol>
+      <li>Which two tags together make a bullet list?
+        <details><summary>Show answer</summary><p><code>&lt;ul&gt;</code> for the whole list and <code>&lt;li&gt;</code> for each item.</p></details>
+      </li>
+      <li>What is the difference between <code>&lt;h1&gt;</code> and <code>&lt;h2&gt;</code>?
+        <details><summary>Show answer</summary><p><code>&lt;h1&gt;</code> is the biggest heading (usually the page title). <code>&lt;h2&gt;</code> is a slightly smaller heading used for sections.</p></details>
+      </li>
+      <li>Why do we put quotes around <code>'Comic Sans MS'</code> but not around <code>cursive</code>?
+        <details><summary>Show answer</summary><p>Because "Comic Sans MS" contains spaces, and the browser needs quotes to know the whole thing is one name.</p></details>
+      </li>
+      <li>Which part of the code changes the background colour of the page?
+        <details><summary>Show answer</summary><p><code>background:#c9f7ff</code> inside the <code>&lt;body&gt;</code> tag's <code>style</code> attribute.</p></details>
+      </li>
+      <li>If a photo does not appear, what are the two most likely reasons?
+        <details><summary>Show answer</summary><p>The file name in <code>src</code> is spelled wrong, or the photo is not in the same folder as the HTML file.</p></details>
+      </li>
+    </ol>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button secondary" onclick="goToPage(5)">← Previous</button>
+    <button class="nav-button" onclick="goToPage(7)">Next: Troubleshooting →</button>
+  </nav>
+</div>
+
+<!-- ==================== PAGE 8: CHAPTER 6 (TROUBLESHOOTING) ==================== -->
+<div class="book-page chapter-page" data-page-index="7">
+  <div class="chapter-header">
+    <p class="chapter-part">Chapter 6</p>
+    <h2>When something goes wrong</h2>
+    <p class="chapter-tagline">Mistakes are not failure — they are the job.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>
+      Every single programmer, every day, sees things that do not work. That is not failure —
+      that is <strong>the job</strong>. Here are the most common problems and their fixes.
+    </p>
+  </div>
+
+  <table>
+    <tr><th>What you see</th><th>What is really happening</th><th>The fix</th></tr>
+    <tr>
+      <td>I see the code on screen instead of a page.</td>
+      <td>The file is saved as <code>.txt</code>.</td>
+      <td>Rename it so it ends in <code>.html</code>.</td>
+    </tr>
+    <tr>
+      <td>The page looks strange and half of it is missing.</td>
+      <td>A closing tag is missing.</td>
+      <td>Check that every <code>&lt;p&gt;</code> has a <code>&lt;/p&gt;</code>, and so on.</td>
+    </tr>
+    <tr>
+      <td>Nothing happens when I click my button.</td>
+      <td>The quotes in <code>onclick</code> are curly, or there is a spelling mistake.</td>
+      <td>Delete the quotes and retype them with a normal keyboard.</td>
+    </tr>
+    <tr>
+      <td>I changed the code but the page looks the same.</td>
+      <td>You did not save, or you did not refresh.</td>
+      <td>Press Ctrl+S, then F5 in the browser.</td>
+    </tr>
+    <tr>
+      <td>My link says "file not found".</td>
+      <td>The file name in <code>href</code> does not match the real file.</td>
+      <td>Check spelling, capital letters, and that both files are in the same folder.</td>
+    </tr>
+    <tr>
+      <td>The emoji shows as an empty box.</td>
+      <td>The computer's font does not have that emoji.</td>
+      <td>Try a different emoji — most modern computers handle the common ones fine.</td>
+    </tr>
+    <tr>
+      <td>My picture will not show.</td>
+      <td>Wrong file name in <code>src</code>, or the picture is in another folder.</td>
+      <td>Put the picture in the same folder and copy its exact name.</td>
+    </tr>
+  </table>
+
+  <div class="chapter-ideas tip">
+    <h3>🔍 The detective method</h3>
+    <p>
+      When something breaks, do not change five things at once. Change <strong>one</strong> thing,
+      save, refresh, look. If it is still broken, change it back and try the next idea.
+      That is how you find the one guilty line.
+    </p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button secondary" onclick="goToPage(6)">← Previous</button>
+    <button class="nav-button" onclick="goToPage(8)">Next: Cheat Sheet →</button>
+  </nav>
+</div>
+
+<!-- ==================== PAGE 9: CHAPTER 7 (CHEAT SHEET) ==================== -->
+<div class="book-page chapter-page" data-page-index="8">
+  <div class="chapter-header">
+    <p class="chapter-part">Chapter 7</p>
+    <h2>The Big Cheat Sheet</h2>
+    <p class="chapter-tagline">Your quick reference for everything in this book.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Keep this page open whenever you build something new.</p>
+  </div>
+
+  <h3>Tags</h3>
+  <table>
+    <tr><th>Tag</th><th>What it does</th><th>Example</th></tr>
+    <tr><td><code>&lt;h1&gt;</code></td><td>Biggest heading</td><td><code>&lt;h1&gt;Hello&lt;/h1&gt;</code></td></tr>
+    <tr><td><code>&lt;h2&gt;</code></td><td>Smaller heading</td><td><code>&lt;h2&gt;My list&lt;/h2&gt;</code></td></tr>
+    <tr><td><code>&lt;p&gt;</code></td><td>Paragraph</td><td><code>&lt;p&gt;I like cats.&lt;/p&gt;</code></td></tr>
+    <tr><td><code>&lt;a&gt;</code></td><td>Link</td><td><code>&lt;a href="page2.html"&gt;Next&lt;/a&gt;</code></td></tr>
+    <tr><td><code>&lt;img&gt;</code></td><td>Picture</td><td><code>&lt;img src="cat.jpg" width="200"&gt;</code></td></tr>
+    <tr><td><code>&lt;ul&gt;&lt;li&gt;</code></td><td>Bullet list</td><td><code>&lt;ul&gt;&lt;li&gt;Pizza&lt;/li&gt;&lt;/ul&gt;</code></td></tr>
+    <tr><td><code>&lt;button&gt;</code></td><td>Clickable button</td><td><code>&lt;button&gt;Click me&lt;/button&gt;</code></td></tr>
+    <tr><td><code>&lt;br&gt;</code></td><td>Line break (no closing tag needed)</td><td><code>Hello&lt;br&gt;World</code></td></tr>
+  </table>
+
+  <h3>Style words</h3>
+  <table>
+    <tr><th>Style</th><th>What it does</th></tr>
+    <tr><td><code>color:red</code></td><td>Changes the <em>text</em> colour</td></tr>
+    <tr><td><code>background:yellow</code></td><td>Changes the <em>background</em> colour</td></tr>
+    <tr><td><code>text-align:center</code></td><td>Centres the text</td></tr>
+    <tr><td><code>font-size:40px</code></td><td>Changes the text size</td></tr>
+    <tr><td><code>font-family:sans-serif</code></td><td>Changes the letter shape</td></tr>
+    <tr><td><code>padding:20px</code></td><td>Adds space inside a box</td></tr>
+    <tr><td><code>border-radius:12px</code></td><td>Rounds the corners</td></tr>
+  </table>
+
+  <h3>Colour words you can use right now</h3>
+  <p>
+    <code>red</code> <code>orange</code> <code>yellow</code> <code>green</code>
+    <code>blue</code> <code>purple</code> <code>pink</code> <code>brown</code>
+    <code>black</code> <code>white</code> <code>gray</code> <code>gold</code>
+    <code>skyblue</code> <code>lightgreen</code> <code>lavender</code> <code>salmon</code>
+  </p>
+
+  <h3>Colour codes (when you want an exact colour)</h3>
+  <p>
+    A colour code starts with <code>#</code> and has six characters, like
+    <code>#ff0000</code> (red) or <code>#c9f7ff</code> (light blue).
+    Use them exactly like colour words: <code>background:#c9f7ff</code>.
+  </p>
+
+  <nav class="book-nav">
+    <button class="nav-button secondary" onclick="goToPage(7)">← Previous</button>
+    <button class="nav-button" onclick="goToPage(9)">Next: Final Quiz →</button>
+  </nav>
+</div>
+
+<!-- ==================== PAGE 10: CHAPTER 8 (FINAL QUIZ) ==================== -->
+<div class="book-page chapter-page" data-page-index="9">
+  <div class="chapter-header">
+    <p class="chapter-part">Chapter 8</p>
+    <h2>The Big Final Quiz 🏆</h2>
+    <p class="chapter-tagline">Time to show what you know.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Try to answer out loud before you click. No peeking!</p>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Part A — Quick facts</h3>
+    <ol>
+      <li>What does HTML stand for?
+        <details><summary>Show answer</summary><p>HyperText Markup Language. (But "the language of web pages" is a perfectly good answer too!)</p></details>
+      </li>
+      <li>Which tag holds everything you can see on the page?
+        <details><summary>Show answer</summary><p><code>&lt;body&gt;</code></p></details>
+      </li>
+      <li>What symbol starts every closing tag?
+        <details><summary>Show answer</summary><p>A forward slash <code>/</code></p></details>
+      </li>
+      <li>Which attribute makes a button do something when clicked?
+        <details><summary>Show answer</summary><p><code>onclick</code></p></details>
+      </li>
+      <li>Which attribute tells a link where to go?
+        <details><summary>Show answer</summary><p><code>href</code></p></details>
+      </li>
+    </ol>
+
+    <h3>Part B — Spot the mistake</h3>
+    <ol>
+      <li>
+        <pre class="code-example" style="margin:6px 0"><code>&lt;p&gt;Hello world&lt;p&gt;</code></pre>
+        What is wrong here?
+        <details><summary>Show answer</summary><p>The second tag should be a closing tag: <code>&lt;/p&gt;</code>. It is missing the slash.</p></details>
+      </li>
+      <li>
+        <pre class="code-example" style="margin:6px 0"><code>&lt;a href=page2.html&gt;Next&lt;/a&gt;</code></pre>
+        What is wrong here?
+        <details><summary>Show answer</summary><p>The address must be in quotes: <code>href="page2.html"</code>.</p></details>
+      </li>
+      <li>
+        <pre class="code-example" style="margin:6px 0"><code>&lt;body style="background:blue"&gt;
+  &lt;h1&gt;Hi&lt;/h1&gt;
+&lt;/html&gt;</code></pre>
+        What is wrong here?
+        <details><summary>Show answer</summary><p><code>&lt;body&gt;</code> was never closed. There should be a <code>&lt;/body&gt;</code> before <code>&lt;/html&gt;</code>.</p></details>
+      </li>
+    </ol>
+
+    <h3>Part C — Think it through</h3>
+    <ol>
+      <li>Why is it better to change one thing at a time when you experiment?
+        <details><summary>Show answer</summary><p>Because if you change five things and the page breaks, you do not know which one caused it. One change at a time tells you exactly what happened.</p></details>
+      </li>
+      <li>What is the difference between <code>color</code> and <code>background</code> in a style?
+        <details><summary>Show answer</summary><p><code>color</code> changes the colour of the <em>letters</em>. <code>background</code> changes the colour <em>behind</em> them.</p></details>
+      </li>
+      <li>If you wanted to make a 10-page adventure story, what would you need to create?
+        <details><summary>Show answer</summary><p>Ten HTML files in one folder, each linked to the others with <code>&lt;a href="..."&gt;</code>.</p></details>
+      </li>
+      <li>Why do programmers say mistakes are normal?
+        <details><summary>Show answer</summary><p>Because computers do exactly what you type, not what you meant. Finding the difference between the two is the actual skill of programming.</p></details>
+      </li>
+    </ol>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button secondary" onclick="goToPage(8)">← Previous</button>
+    <button class="nav-button" onclick="goToPage(10)">Next: Certificate →</button>
+  </nav>
+</div>
+
+<!-- ==================== PAGE 11: CHAPTER 9 (CERTIFICATE) ==================== -->
+<div class="book-page chapter-page" data-page-index="10">
+  <div class="chapter-header">
+    <p class="chapter-part">Chapter 9</p>
+    <h2>Your certificate and what to do next 🎓</h2>
+    <p class="chapter-tagline">You did it!</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Tick each box when you have finished that project. No cheating — the boxes know. 😄</p>
+  </div>
+
+  <ul class="checklist">
+    <li><input type="checkbox"> I saved a file with the <code>.html</code> ending.</li>
+    <li><input type="checkbox"> I opened my own web page in a browser.</li>
+    <li><input type="checkbox"> I made the Silly Face Clicker and it works.</li>
+    <li><input type="checkbox"> I changed at least three things to make it my own.</li>
+    <li><input type="checkbox"> I built a 3-page adventure story with working links.</li>
+    <li><input type="checkbox"> I wrote my own story words instead of copying.</li>
+    <li><input type="checkbox"> I made my All About Me page.</li>
+    <li><input type="checkbox"> I fixed at least one mistake all by myself.</li>
+    <li><input type="checkbox"> I answered the review questions without peeking. (Mostly.)</li>
+  </ul>
+
+  <h3>Ideas for your next projects</h3>
+  <ul>
+    <li>🎂 A birthday card page for someone you love.</li>
+    <li>🐕 A page about your pet, with photos.</li>
+    <li>🧮 A "top 5" page — top 5 games, foods, or songs.</li>
+    <li>📖 A joke book where each joke is on its own page.</li>
+    <li>🌍 A page about a country you want to visit.</li>
+    <li>🎮 A page with <em>three</em> buttons, each one changing something different.</li>
+  </ul>
+
+  <div class="chapter-ideas grownup">
+    <h3>🚀 Taking it further (for the grown-up)</h3>
+    <p>
+      When your young coder is comfortable, you can publish their pages for free using
+      <strong>GitHub Pages</strong> — that is exactly how this book's author's site,
+      <a href="https://agunechemba.github.io" target="_blank" rel="noopener">agunechemba.github.io</a>,
+      is hosted. The next logical steps after HTML are <strong>CSS</strong> (for beautiful
+      styling in a separate file) and a little <strong>JavaScript</strong> (for real games and
+      interactivity). But there is no rush — three finished projects and a working "save,
+      refresh, look" habit is a fantastic start.
+    </p>
+  </div>
+
+  <nav class="book-nav">
+    <button class="nav-button secondary" onclick="goToPage(9)">← Previous</button>
+    <button class="nav-button" onclick="goToPage(11)">Close the book →</button>
+  </nav>
+</div>
+
+<!-- ==================== PAGE 12: BACK COVER ==================== -->
+<div class="book-page cover-page back-cover" data-page-index="11">
+  <div class="cover-content">
+    <p class="cover-series">The End</p>
+    <h1>You are a<br>web maker now. 🌟</h1>
+    <p class="cover-subtitle">Three projects done.<br>Three new ideas waiting.</p>
+    <p class="closing-line">Keep building. Keep refreshing.</p>
+    <nav class="book-nav">
+      <button class="nav-button" onclick="goToPage(0)">Read again from the beginning</button>
+    </nav>
+    <p class="cover-credit">
+      <a href="https://agunechemba.github.io" target="_blank" rel="noopener">Agunechemba Ekene</a>
+    </p>
+    <p class="cover-note" style="margin-top:28px;">
+      Made for curious 7-year-olds<br>and the grown-ups who type the pointy brackets. 🧱✨
+    </p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
